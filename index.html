@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Biblioteca de Icones-->
+    <script src="https://kit.fontawesome.com/43d4f8c7b9.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+    <!-- Link CSS Principal -->
+    <link rel="stylesheet" href="estilos/style.css">
+    <!-- Responsivo -->
+     <link rel="stylesheet" href="estilos/responsivo.css">
+    <title>Esqueleto</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="imagens/logo.png" alt="Logo da Empresa">
+            <ul class="menu-desktop">
+                <div class="close-menu">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Mídias Sociais -->
+            <div class="midias-sociais">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Textos -->
+     <main class="hero">
+        <div class="hero-content">
+            <h1>MEDICINA AUTOMOTIVA</h1>
+            <p>Cuidamos do seu veículo com profissionalismo e dedicação.</p>
+            <a href="#" class="btn-main">AGENDE SUA VISITA</a>
+        </div>
+    </main>
+
+    <section id="sobre">
+        <div class="sobre">
+            <img src="imagens/carros-section01.png" alt="Carros">
+            <div class="sobre-texto">
+                <h2>Sobre Nós</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </section>
+
+    <section id="servicos">
+
+            <div class="servicos">
+                <div class="servicos-texto">
+                    <h2>Serviços</h2>
+                    <p>Tudo de mordeno para seu carro.</p>
+                </div>
+            </div>
+
+            <div class="servicos-imagens">
+                <div class="img-card">
+                    <img src="imagens//oficina.jpg" alt="Oficina">
+                    <h3>Laboratório</h3>
+                </div>
+
+                <div class="img-card">
+                    <img src="imagens/mecanico.jpg" alt="Mecanicos">
+                    <h3>Mecânicos</h3>
+                </div>
+
+                <div class="img-card">
+                    <img src="imagens/labororo.jpg" alt="Laboratório">
+                    <h3>Oficina</h3>
+                </div>
+
+            </div>
+    </section>
+
+
+
+<section id="equipe">
+    <div class="equipe">
+        <h2>Nossa Equipe</h2>
+        <p>Conheça nosso time vencedor.</p>
+    </div>
+
+    <div class="carousel-container">
+        <button class="btn-control prev" onclick="moveManual(-1)">&#10094;</button>
+        
+        <div class="carousel-window" id="carouselWindow">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="imagens/junior001.jpg" alt="Ed Pereira">
+                    <h3>Ed Pereira</h3>
+                    <p>Presidente</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/junior-edit02.jpg" alt="Edvaldo Junior">
+                    <h3>Edvaldo Junior</h3>
+                    <p>Programador Pleno</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/thauan001.jpg" alt="Thauan Coutinho">
+                    <h3>Thauan Coutinho</h3>
+                    <p>Engenheiro</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/eduardo001.jpg" alt="Eduardo Mendes">
+                    <h3>Eduardo Mendes</h3>
+                    <p>Mecânico Chefe</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-control next" onclick="moveManual(1)">&#10095;</button>
+    </div>
+</section>
+
+<!-- Ícone flutuante do WhatsApp -->
+<a href="https://wa.me/5511999999999?text=Olá, gostaria de mais informações sobre os serviços." class="whatsapp-float" target="_blank" aria-label="Contato via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span>Fale com a gente</span>
+</a>
+
+
+<footer id="footer">
+    <div class="footer-logo">
+        <img src="imagens/logo.png" alt="Logo da Empresa">
+    </div>
+
+    <div class="footer-container">
+
+        <div class="footer-contatos">
+            <h3>CONTATOS</h3>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i> Rua da Paz, 777 - Santo Seya - CEP: 50000-000 - Recife/PE</li>
+                <li><i class="fa-solid fa-phone"></i> +55 81 9.9999-0000</li>
+                <li><i class="fa-solid fa-envelope"></i> contato@medicinaautomotiva.com</li>
+            </ul>
+        </div>
+
+        <div class="footer-menu">
+            <h3>MENU</h3>
+            <ul>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-midiassociais">
+            <h3>SIGA-NOS</h3>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+        </div>
+
+        
+
+
+    </div><!--footer-container-->
+
+
+</footer>
+
+
+</body>
+
+</html>

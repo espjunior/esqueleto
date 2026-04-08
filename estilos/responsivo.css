@@ -1,0 +1,230 @@
+/* Responsividade para dispositivos móveis */
+
+/* Media Query para telas menores que 768px */
+@media (max-width: 768px) {
+    /* Bloquear scroll quando menu ativo */
+    body.no-scroll {
+        overflow: hidden;
+    }
+    /* Navbar */
+    .navbar {
+        padding: 20px 5%;
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .menu-desktop {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .close-menu:hover {
+        transform: scale(1.2);
+    }
+
+    .menu-desktop.active {
+        display: flex;
+    }
+
+    .menu-desktop li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-desktop li a {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .midias-sociais {
+        display: none; /* Ocultar mídias sociais no mobile */
+    }
+
+    /* Hero */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .btn-main {
+        padding: 15px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Section Sobre */
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 5%;
+        margin-top: 5%;
+    }
+
+    .sobre img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .sobre-texto {
+        max-width: 100%;
+    }
+
+    /* Section Serviços */
+    #servicos {
+        padding: 20px 5%;
+    }
+
+    .servicos {
+        flex-direction: column;
+        padding: 20px 5%;
+        margin-top: 5%;
+    }
+
+    .servicos-texto {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .servicos-imagens {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-card {
+        text-align: center;
+    }
+
+    .img-card img {
+        width: 100%;
+        max-width: 300px;
+    }
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 5%;
+    }
+
+    .footer-logo img {
+        width: 100px;
+        max-width: 100%;
+    }
+
+    .footer-menu {
+        display: none;
+    }
+
+    .footer-contatos h3 {
+        text-align: center;
+    }
+
+    .footer-contatos ul li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .footer-midiassociais {
+        text-align: center;
+    }
+
+    .footer-midiassociais a {
+        margin: 0 10px;
+    }}
+
+/* Media Query para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-main {
+        padding: 12px 12px;
+        font-size: 0.8rem;
+    }
+
+    .sobre-texto h2 {
+        font-size: 1.5rem;
+    }
+
+    .servicos-texto h2 {
+        font-size: 1.5rem;
+    }
+
+    .img-card h3 {
+        font-size: 1rem;
+    }
+
+    .img-card p {
+        font-size: 0.8rem;
+    }
+
+    /* WhatsApp flutuante no mobile */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border-radius: 50%;
+        justify-content: center;
+        font-size: 25px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-float i {
+        font-size: 25px;
+        margin-right: 0;
+    }
+
+    .whatsapp-float span {
+        display: none;
+    }
+
+    /* Footer adicional para telas muito pequenas */
+    .footer-logo img {
+        width: 80px;
+    }
+
+    .footer-contatos ul li {
+        font-size: 0.8rem;
+    }
+
+    .footer-midiassociais a {
+        margin: 0 8px;
+    }
+}

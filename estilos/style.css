@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* 
+
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* ------ Header ----- */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0,0,0,0.3)), url(../imagens/bg_05.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+
+
+/* ------ Header MENU ----- */
+
+.menu-desktop {
+    display: flex;
+    gap: 3rem;
+}
+
+.menu-desktop li a {
+    display: inline-block; /* Necessário para o transform funcionar */
+    color: white;
+    font-size: 1rem;
+    transition: 0.5s ease;
+}
+
+.menu-desktop li a:hover {
+    transform: scale(1.30); /* Aumenta o tamanho em ~33% (equivalente a subir de 1.5rem para 2rem) */
+}   
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+}
+
+
+/* ------ Header MIDIAS SOCIAIS----- */
+
+.midias-sociais {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.midias-sociais a {
+    color: white;
+    font-size: 1rem;
+    transition: 0.5s ease;
+}
+
+.midias-sociais a:hover {
+    transform: scale(1.30); /* Aumenta o tamanho em ~33% (equivalente a subir de 1.5rem para 2rem) */
+}
+
+/* ------ MAIN Texto do Hero ----- */
+
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+/* ------ Botão Principal ----- */
+.btn-main {
+    display: inline-block;
+    background-color: #6c0698;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: rgb(33, 95, 252);
+}
+
+/* ------ Section Sobre ----- */
+
+#sobre {
+    background-color: #021836;
+    padding: 50px 0;
+}
+
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    margin-top: 10%;
+}
+
+.sobre-texto {
+    max-width: 500px;
+    text-align: justify;
+}
+
+.sobre-texto h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 10%;
+}
+
+/* ------ Section Serviços ----- */
+
+#servicos {
+    background-color: #152040;
+    padding: 20px 10%;
+}
+
+.servicos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10%;
+    margin-top: 5%;
+}
+
+.servicos-texto {
+    max-width: 600px;
+    text-align: justify;
+}
+
+.servicos-texto h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.servicos-texto p {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+/* ------ IMAGENS Section Serviços ----- */
+
+.servicos-imagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-card img {
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+
+.img-card img:hover {
+    transform: scale(1.10); /* Aumenta o tamanho em ~33% (equivalente a subir de 1.5rem para 2rem) */
+}
+
+
+.img-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.img-card p {
+    font-size: .9rem;
+    color: #ffffff;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* ------ Section Equipe ----- */
+.equipe {
+    padding: 50px 0;
+    margin-top: 10%;
+}
+
+.equipe h2, p {
+    text-align: center;
+    color: #000000;
+}
+
+
+/* Container Principal */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    overflow: hidden; /* Garante que nada saia das bordas */
+}
+
+/* A janela que esconde o resto do conteúdo */
+.carousel-window {
+    width: 100%;
+    overflow: hidden; /* Importante: esconde a barra de rolagem nativa */
+    padding: 20px 0;
+}
+
+/* A pista que contém os cards e desliza */
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    /* Transição SUPER suave e agradável (cubic-bezier) */
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform; /* Otimização de performance */
+}
+
+/* Estilo do Card */
+.card {
+    /* Define quantos cards aparecem por vez no desktop (ex: 3) */
+    flex: 0 0 calc(33.333% - 14px); 
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* REDUZINDO E AJUSTANDO A IMAGEM */
+.card img {
+    width: 100%;
+    height: 450px; /* Altura fixa e reduzida */
+    object-fit: cover; /* Corta a imagem para caber sem distorcer */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card h3 { font-size: 1.1rem; margin: 5px 0; }
+.card p { font-size: 0.9rem; color: #666; margin: 0; }
+
+/* Botões de controle */
+.btn-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.btn-control:hover { background: #333; color: #fff; }
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    .card {
+        /* Mostra quase um card inteiro no celular (para indicar que tem mais) */
+        flex: 0 0 85%; 
+    }
+
+    .card img {
+        height: 350px; /* Imagem ainda menor no celular */
+    }
+
+    .btn-control {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.7); /* Mais transparente */
+    }
+    
+    .prev { left: 5px; }
+    .next { right: 5px; }
+}
+
+/* Ícone flutuante do WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+}
+
+.whatsapp-float i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.whatsapp-float span {
+    white-space: nowrap;
+}
+
+/* ------ Footer ----- */
+
+#footer {
+    background-color: #021836;
+    color: white;
+    padding: 20px 0;
+    margin-top: 10%;
+}
+
+.footer-logo  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.footer-container {
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.footer-menu a {
+    color: #ffffff;
+}
+
+.footer-midiassociais i {
+    color: #ffffff;
+}
