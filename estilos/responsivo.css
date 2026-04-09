@@ -216,8 +216,8 @@
     }
 
     /* Footer adicional para telas muito pequenas */
-    .footer-logo img {
-        width: 80px;
+    .footer-logo img { /*Logo para pequenas telas*/
+        width: 200px;
     }
 
     .footer-contatos ul li {
