@@ -304,11 +304,25 @@ header {
 @media (max-width: 768px) {
     .card {
         /* Mostra quase um card inteiro no celular (para indicar que tem mais) */
-        flex: 0 0 85%; 
+        flex: 0 0 85%;
+        /* Melhor experiência de toque */
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        touch-action: pan-y pinch-zoom; /* Permite swipe horizontal mas mantém scroll vertical */
+    }
+
+    .carousel-window {
+        /* Melhora performance no mobile */
+        -webkit-overflow-scrolling: touch;
     }
 
     .card img {
         height: 350px; /* Imagem ainda menor no celular */
+        /* Evita arrastar a imagem durante o swipe */
+        pointer-events: none;
+        -webkit-user-drag: none;
     }
 
     .btn-control {

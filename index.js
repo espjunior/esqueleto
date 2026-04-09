@@ -102,6 +102,44 @@ function stopAutoPlay() {
     clearInterval(autoRun);
 }
 
+// --- SWIPE/TOQUE ---
+let touchStartX = 0;
+let touchEndX = 0;
+let isSwiping = false;
+
+// Detecta o início do toque
+function handleTouchStart(e) {
+    touchStartX = e.changedTouches[0].screenX;
+    isSwiping = true;
+    stopAutoPlay();
+}
+
+// Detecta o fim do toque e calcula o swipe
+function handleTouchEnd(e) {
+    if (!isSwiping) return;
+    
+    touchEndX = e.changedTouches[0].screenX;
+    isSwiping = false;
+    
+    // Distância mínima para considerar um swipe válido
+    const minSwipeDistance = 50;
+    const swipeDistance = touchStartX - touchEndX;
+    
+    // Verifica se foi um swipe significativo
+    if (Math.abs(swipeDistance) > minSwipeDistance) {
+        // Swipe para esquerda = próximo (-1 na lógica do carousel)
+        // Swipe para direita = anterior (1 na lógica do carousel)
+        if (swipeDistance > 0) {
+            moveManual(1); // Para esquerda, avança
+        } else {
+            moveManual(-1); // Para direita, volta
+        }
+    } else {
+        // Se não foi um swipe válido, reinicia o auto-play
+        startAutoPlay();
+    }
+}
+
 // --- Eventos ---
 
 // Inicia o auto-play
@@ -114,5 +152,5 @@ window.addEventListener('resize', updateCarousel);
 const container = document.querySelector('.carousel-container');
 container.addEventListener('mouseenter', stopAutoPlay);
 container.addEventListener('mouseleave', startAutoPlay);
-container.addEventListener('touchstart', stopAutoPlay, {passive: true});
-container.addEventListener('touchend', startAutoPlay);
+container.addEventListener('touchstart', handleTouchStart, {passive: true});
+container.addEventListener('touchend', handleTouchEnd, {passive: true});
