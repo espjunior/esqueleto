@@ -143,6 +143,8 @@ header {
     color: white;
     font-size: 1rem;
     margin-bottom: 10%;
+    text-align: justify;
+    text-indent: 50px;
 }
 
 /* ------ Section Serviços ----- */
