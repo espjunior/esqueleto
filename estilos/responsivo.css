@@ -1,7 +1,7 @@
 /* Responsividade para dispositivos móveis */
 
 /* Media Query para telas menores que 768px */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     /* Bloquear scroll quando menu ativo */
     body.no-scroll {
         overflow: hidden;
